@@ -30,7 +30,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        production_company = ProductionCompany(result['first_name'], result['last_name'], result['id'] )
+        production_company = ProductionCompany(result['name'], result['id'] )
     return production_company
 
 def update(production_company):

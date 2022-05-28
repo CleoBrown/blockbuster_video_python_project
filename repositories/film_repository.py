@@ -7,9 +7,9 @@ from repositories import production_company
 
 def save(film):
     sql = "INSERT INTO films (title, year, director, description, quantity, buying_cost, selling_price, production_company_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
-    values = [film.title, film.year, film.direcor, film.description, film.quantity, film.buying_cost, film.selling_price, film.production_company_id]
+    values = [film.title, film.year, film.director, film.description, film.quantity, film.buying_cost, film.selling_price, film.production_company.id]
     run_sql(sql, values)
-    id = run_sql("SELECT MAX(id) FROM tasks")
+    id = run_sql("SELECT MAX(id) FROM films")
     film.id = id[0][0]
     return film
 
@@ -23,7 +23,7 @@ def select_all():
         prod_company = production_company.select(row['production_company_id'])
         film = Film(row['title'], row['year'], row['director'],row['description'],row['quantity'],row['buying_cost'],row['selling_price'],prod_company, row["id"] )
         films.append(film)
-    return film   
+    return films   
 
 def select(id):
    
