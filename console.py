@@ -1,11 +1,9 @@
 from models.production_company import ProductionCompany
 from models.film import Film
+from repositories import film_repository, production_company
 
-import repositories.task_repository as task_repository
-import repositories.user_repository as user_repository
-
-# film_repository.delete_all()
-# production_company_repository.delete_all()
+film_repository.delete_all()
+production_company.delete_all()
 
 # ProductionCompanies
 atlantic_entertainment_group = ProductionCompany('Atlantic Entertainment Group')
@@ -29,9 +27,30 @@ universal_pictures = ProductionCompany('Universal Pictures')
 warner_bros = ProductionCompany('Warner Bros')
 
 
+list_prod_cos = [
+    atlantic_entertainment_group,
+    cinema_84,
+    columbia_pictures,
+    constantin_film,
+    de_laurentiis_entertainment_group,
+    henson_associates,
+    imagine_entertainment,
+    new_line_cinema,
+    orion_pictures,
+    paramount_pictures,
+    polygram_pictures,
+    renaissance_pictures,
+    thorn_emi_screen_entertainment,
+    touchstone_pictures,
+    tristar_pictures,
+    twentieth_century_fox,
+    united_artists,
+    universal_pictures,
+    warner_bros
+]
 
-
-
+for prod_co in list_prod_cos:
+    production_company.save(prod_co)
 
 film_list = [
     Film("Big",
@@ -41,7 +60,7 @@ film_list = [
 20,
 1,
 2,
-"Twentieth Century Fox"),
+twentieth_century_fox),
 
     Film("Turner & Hooch",
 1989,
@@ -50,7 +69,7 @@ film_list = [
 10,
 3,
 4,
-"Touchstone Pictures"
+touchstone_pictures
 
 ),
     Film("Raiders of the Lost Ark",
@@ -60,7 +79,7 @@ film_list = [
 8,
 2,
 5,
-"Paramount Pictures"
+paramount_pictures
 
 ),
     Film("The Goonies",
@@ -70,7 +89,7 @@ film_list = [
 6,
 4,
 6,
-"Warner Bros."
+warner_bros
 
 ),
     Film("Gremlins",
@@ -80,7 +99,7 @@ film_list = [
 43,
 2,
 3,
-"Warner Bros."
+warner_bros
 
 ),
     Film("The Karate Kid",
@@ -90,7 +109,7 @@ film_list = [
 32,
 1,
 6,
-"Columbia Pictures",
+columbia_pictures,
 
 ),
     
@@ -99,10 +118,4 @@ for film in film_list:
     film_repository.save(film)
 
 
-# user_repository.select_all()
-
-# task_1 = Task("Plant seeds", user1, 30)
-# task_repository.save(task_1)
-
-# task_2 = Task("Go for a run", user1, 30, True)
-# task_repository.save(task_2)
+film_repository.select_all()
