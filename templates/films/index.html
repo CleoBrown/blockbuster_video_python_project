@@ -1,33 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Product Page</h1>
-
-{% for film in films %}
-<div class="task">
-    <div class="content">
-        {{film.title}}
+<h1>Product List</h1>
+<div class="container">
+    {% for film in films %}
+    <div class="item">
         <div>
             <img src="{{url_for('static', filename = 'images/' ~ film.id ~ '.jpg')}}" alt="{{film.title}}">
             <!--https://stackoverflow.com/questions/48002297/how-to-concatenate-int-with-str-type-in-jinja2-template -->
         </div>
-        <div class="description">
-            <a href="#">{{film.description}}</a>
-            <span class="duration">{{film.director}} mins</span>
-        </div>
-        <div class="buttons">
+        <div>
+            <div>
 
-            <form class="delete-form" action="#" method="POST">
-                <button class="trash-button"><i class="fa fa-trash-o fa-3x" style="color:red"
-                        aria-hidden="true"></i></button>
-            </form>
+                <h3>{{film.title}}</h3>
 
-            {% if film.quantity < 7 %} <i class="fa fa-check fa-2x" style="color: red" aria-hidden="true"></i>
-                {% else %}
-                <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-                {% endif %}
+
+                <div>
+                    <ul>
+                        <li>Year: {{film.year}}</li>
+                        <li>Director: {{film.director}} </li>
+                        <li>{{film.description}}</li>
+                        <li>Quantity: {{film.quantity}}</li>
+                        <li>Buying Cost: £{{film.buying_cost}}</li>
+                        <li>Selling Price: £{{film.selling_price}}</li>
+                        <li>{{film.production_company.name}}</li>
+                    </ul>
+
+
+                </div>
+                <div>
+                    <div class="container">
+
+                        <form action="/films/{{film.id}}/edit" method="GET">
+                            <button class="edit-button">edit</button>
+                        </form>
+                        <form action="/films/{{film.id}}/delete" method="GET">
+                            <button class="delete-button">delete</button>
+                        </form>
+                        {% if film.quantity == 0 %} <strong class="low-stock">**out of stock**</strong>
+                        {% elif film.quantity < 8 %} <strong class="low-stock">low stock</strong>
+                            {% endif %}
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    {% endfor %}
 </div>
-{% endfor %}
-
 {% endblock %}

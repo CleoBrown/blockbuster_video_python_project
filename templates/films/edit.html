@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/films/{{film.id}}" method="post">
+    <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{film.title}}" required autofocus>
+    </div>
+    <div>
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" value="{{film.year}}" required autofocus>
+    </div>
+    <div>
+        <label for="director">Director:</label>
+        <input type="text" id="Director" name="director" value="{{film.director}}" required>
+    </div>
+
+    <div>
+        <label for="description">Desription:</label>
+        <input type="text" id="description" name="description" value="{{film.description}}" required>
+    </div>
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="number" name="quantity" value="{{film.quantity}}" required>
+    </div>
+    <div>
+        <label for="buying_cost">Buying Cost:</label>
+        <input type="number" id="number" name="buying_cost" value="{{film.buying_cost}}" required>
+    </div>
+    <div>
+        <label for="selling_price">Selling Price:</label>
+        <input type="number" id="number" name="selling_price" value="{{film.selling_price}}" required>
+    </div>
+
+    <div>
+        <label for="production_company_id">Production Company:</label>
+        <select id="production_company_id" name="production_company_id">
+            {% for pc in production_companies %}
+            <option value="{{ pc.id }}" {% if film.production_company.id==pc.id %} selected="selected" {% endif %}>
+                {{ pc.name }}
+
+            </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit">Update film</button>
+
+</form>
+
+{% endblock %}

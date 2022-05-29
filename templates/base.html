@@ -2,29 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>Blockbuster</title>
 </head>
 
+
+
+
 <body>
-  <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="/">Home</a></li>
-        <li><a href="/films">Films</a></li>
-        <li><a href="#">Production Companies</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div class="container">
+
+  <div class="topnav">
+
+
+    <a href="/">Home</a>
+    <a href="/films">Film Inventory</a>
+    <a href="/films/new">Add Film</a>
+    <a href="/production_companies">Production Companies</a>
+    <a href="/production_company/new">Add Production Companies</a>
+
+  </div>
+
+  <div class="content">
     {% block content %}
     {% endblock %}
   </div>
+
+  <div class="footer">
+    {% block footer %}
+    {% endblock %}
+  </div>
+
 </body>
 
 </html>
