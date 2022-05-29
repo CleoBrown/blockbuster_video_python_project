@@ -27,7 +27,7 @@ def select_all():
 
 def select(id):
    
-    sql = "SELECT * FROM tasks WHERE id = ?"
+    sql = "SELECT * FROM films WHERE id = ?"
     values = [id]
     result = run_sql(sql, values)[0]
 
@@ -39,7 +39,7 @@ def select(id):
 
 def update(film):
     sql = "UPDATE films SET (title, year, director, description, quantity, buying_cost, selling_price, production_company_id) = (?, ?, ?, ?, ?, ?, ?, ?) WHERE id = ?"
-    values = [film.title, film.year, film.director, film.decription, film.quantity, film.buying_cost, film.selling_price, film.production_company_id, film.id]
+    values = [film.title, film.year, film.director, film.description, film.quantity, film.buying_cost, film.selling_price, film.production_company.id, film.id]
     run_sql(sql, values)
 
 def delete_all():
