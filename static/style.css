@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    column-gap: 50px;
+    row-gap: 25px;
+
+}
+
+.item {
+    order: 5;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: white;
+    background-color: ghostwhite;
+    padding: 10px;
+    width: 300px;
+}
+
+
+
+.low-stock {
+    color: red;
+    padding-left: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgb(16, 48, 173);
+
+}
+
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    background-color: whitesmoke;
+    padding: 50px;
+
+
+}
+
+/* Style the footer */
+.footer {
+    background-color: #FFCC00;
+    padding: 30px;
+}
