@@ -20,8 +20,10 @@
                         <li>Director: {{film.director}} </li>
                         <li>{{film.description}}</li>
                         <li>Quantity: {{film.quantity}}</li>
-                        <li>Buying Cost: £{{film.buying_cost}}</li>
-                        <li>Selling Price: £{{film.selling_price}}</li>
+                        <li>Buying Cost: {{ "£%.2f"|format(film.buying_cost)}}</li>
+                        <li>Selling Price: {{ "£%.2f"|format(film.selling_price)}}</li>
+                        <li>Markup: {{ "£%.2f"|format(film.mark_up) }}</li>
+                        <!-- https://support.sendwithus.com/jinja/formatting_numbers/ -->
                         <li>{{film.production_company.name}}</li>
                     </ul>
 
