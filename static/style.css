@@ -175,7 +175,6 @@ body {
 /* Style the footer */
 .footer {
     background-color: #FFCC00;
-    height: 60px;
+    padding: 30px;
     clear: both;
-
 }
