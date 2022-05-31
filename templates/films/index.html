@@ -1,52 +1,58 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Product List</h1>
-<div class="container">
-    {% for film in films %}
-    <div class="item">
-        <div>
-            <img src="{{url_for('static', filename = 'images/' ~ film.id ~ '.jpg')}}" alt="{{film.title}}">
-            <!--https://stackoverflow.com/questions/48002297/how-to-concatenate-int-with-str-type-in-jinja2-template -->
-        </div>
-        <div>
+
+<h1>PRODUCT LIST - FILMS</h1>
+
+<div class="container-center">
+    <div class="container">
+        {% for film in films %}
+        <div class="item">
             <div>
-
-                <h3>{{film.title}}</h3>
-
-
+                <img src="{{url_for('static', filename = 'images/' ~ film.id ~ '.jpg')}}" alt="{{film.title}}">
+                <!--https://stackoverflow.com/questions/48002297/how-to-concatenate-int-with-str-type-in-jinja2-template -->
+            </div>
+            <div>
                 <div>
-                    <ul>
-                        <li>Year: {{film.year}}</li>
-                        <li>Director: {{film.director}} </li>
-                        <li>{{film.description}}</li>
-                        <li>Quantity: {{film.quantity}}</li>
-                        <li>Buying Cost: {{ "£%.2f"|format(film.buying_cost)}}</li>
-                        <li>Selling Price: {{ "£%.2f"|format(film.selling_price)}}</li>
-                        <li>Markup: {{ "£%.2f"|format(film.mark_up) }}</li>
-                        <!-- https://support.sendwithus.com/jinja/formatting_numbers/ -->
-                        <li>{{film.production_company.name}}</li>
-                    </ul>
+
+                    <h3>{{film.title}}</h3>
 
 
-                </div>
-                <div>
-                    <div class="container">
+                    <div>
+                        <ul>
+                            <li>Year: {{film.year}}</li>
+                            <li>Director: {{film.director}} </li>
+                            <li>{{film.description}}</li>
+                            <li>Quantity: {{film.quantity}}</li>
+                            <li>Buying Cost: {{ "£%.2f"|format(film.buying_cost)}}</li>
+                            <li>Selling Price: {{ "£%.2f"|format(film.selling_price)}}</li>
+                            <li>Markup: {{ "£%.2f"|format(film.mark_up) }}</li>
+                            <!-- https://support.sendwithus.com/jinja/formatting_numbers/ -->
+                            <li>{{film.production_company.name}}</li>
+                        </ul>
 
-                        <form action="/films/{{film.id}}/edit" method="GET">
-                            <button class="edit-button">edit</button>
-                        </form>
-                        <form action="/films/{{film.id}}/delete" method="GET">
-                            <button class="delete-button">delete</button>
-                        </form>
-                        {% if film.quantity == 0 %} <strong class="low-stock">**out of stock**</strong>
-                        {% elif film.quantity < 8 %} <strong class="low-stock">low stock</strong>
-                            {% endif %}
 
+                    </div>
+                    <div>
+                        <div class="button-container">
+
+                            <form action="/films/{{film.id}}/edit" method="GET" class="button-form">
+                                <button class="edit-button">edit</button>
+                            </form>
+                            <form action="/films/{{film.id}}/delete" method="GET" class="button-form">
+                                <button class="delete-button">delete</button>
+                            </form>
+                            <p>
+                                {% if film.quantity == 0 %} <strong class="low-stock">**out of stock**</strong>
+                                {% elif film.quantity < 8 %} <strong class="low-stock">low stock</strong>
+                                    {% endif %}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
+
 {% endblock %}
