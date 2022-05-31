@@ -1,48 +1,78 @@
-* {
+h1 {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(29, 29, 29, .7);
+    letter-spacing: 5px;
+    padding-bottom: 70px;
+    /* padding-bottom: 100px; */
+}
 
+
+
+h2 {
+    text-align: left;
+    font-size: 25px;
+    color: rgba(29, 29, 29, .7);
 
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     column-gap: 50px;
     row-gap: 25px;
-
+    color: rgba(29, 29, 29, .7);
+    /* padding: 10px; */
+    margin: 1px
 }
 
+.button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+    column-gap: 1px;
+    color: rgba(29, 29, 29, .7);
+    /* margin: 1px */
+}
 
 .item {
-    order: 5;
+    /* order: 5; */
     border-width: 3px;
     border-style: solid;
-    border-radius: 10px;
-    border-color: ghostwhite;
-    background-color: ghostwhite;
+    border-radius: 5px;
+    border-color: white;
+    background-color: white;
     padding: 10px;
     width: 300px;
     box-shadow: 1px 1px 20px #d0d0d0;
+
+
 
 }
 
 /* Style the content */
 .content {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 50px;
-
-
 }
 
-/* .content>form {
-    background-color: whitesmoke;
-    padding: 50px;
-    float: left;
+/* https://stackoverflow.com/a/48030340 */
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-} */
+.button-form {
+    padding: 1px;
+    width: 33.333%;
+    justify-content: left;
+}
 
 form {
     width: 50%;
@@ -143,7 +173,8 @@ body {
 .img-nav {
     height: 50px;
     float: right;
-
+    position: relative;
+    padding: 10px;
 
 }
 
