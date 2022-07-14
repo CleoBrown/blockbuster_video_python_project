@@ -23,9 +23,9 @@ Run:<br>
 flask run
 ```
 
-## Project Brief:<br>
+## Project Brief: Shop Inventory <br>
 
-Shop Inventory <br>
+
 
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
 
