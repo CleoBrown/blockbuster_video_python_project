@@ -41,7 +41,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 ## Technologies:<br>
 
-HTML / CSS<br>
-Python<br>
-Flask<br>
-SQLite3<br>
+- HTML / CSS<br>
+- Python<br>
+- Flask<br>
+- SQLite3<br>
