@@ -39,7 +39,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 
 
-Technologies:<br>
+## Technologies:<br>
 
 HTML / CSS<br>
 Python<br>
