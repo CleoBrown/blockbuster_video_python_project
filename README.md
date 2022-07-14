@@ -1,4 +1,4 @@
-# Blockbuster project
+# Blockbuster Project
 ## Steps to run
 1. **Create the database**
 
