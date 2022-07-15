@@ -38,7 +38,7 @@ sqlite3 db/product_manager.db < db/product_manager.sql
 python console.py
 ```
 
-- Run the app on localhost:5000<br>
+- Run the app on http://localhost:5000<br>
 <br>Run:
 ```
 flask run
