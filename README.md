@@ -1,4 +1,4 @@
-# Blockbuster Project
+# Blockbuster Shop App
 
 ## Project Brief: Shop Inventory <br>
 
