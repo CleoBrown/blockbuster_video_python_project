@@ -25,7 +25,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 ## Steps to run
 - **Create the database**<br>
-Run:<br>
+<br>Run:
 
 (The below command must be run first to ensure the database tables are created and the primary keys are reset to 1. The database primary keys are set to match the picture file names).
 ```
@@ -33,13 +33,13 @@ sqlite3 db/product_manager.db < db/product_manager.sql
 ```
 
 - **Insert data from console.py file**<br>
-Run:<br>
+<br>Run:
 ```
 python console.py
 ```
 
 - **Run the app on localhost:5000**<br>
-Run:<br>
+<br>Run:
 ```
 flask run
 ```
