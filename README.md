@@ -24,7 +24,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - SQLite3<br>
 
 ## Steps to run
-1. **Create the database**
+- **Create the database**
 
 Run:<br>
 
@@ -33,14 +33,14 @@ Run:<br>
 sqlite3 db/product_manager.db < db/product_manager.sql
 ```
 
-2. **Insert data from console.py file**
+- **Insert data from console.py file**
 
 Run:<br>
 ```
 python console.py
 ```
 
-3. **Run the app on localhost:5000**
+- **Run the app on localhost:5000**
 
 Run:<br>
 ```
