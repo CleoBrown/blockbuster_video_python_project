@@ -1,4 +1,4 @@
-# Blockbuster Shop App
+# Blockbuster Shop Flask App
 
 ## Project Brief: Shop Inventory <br>
 
