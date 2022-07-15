@@ -23,7 +23,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - Flask<br>
 - SQLite3<br>
 
-## Steps to run
+## Manual steps to run
 - Create the database<br>
 <br>Run:
 
