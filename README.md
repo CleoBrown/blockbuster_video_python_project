@@ -23,6 +23,26 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - Flask<br>
 - SQLite3<br>
 
+## Run with Docker
+
+To build the image locally, cd into this project root directory and run:
+
+```
+docker build -t blockbuster .
+```
+
+Then to run:
+
+```
+docker run -p 5000:5000 --name blockbuster_app blockbuster
+```
+
+To stop the container:
+
+```
+docker stop blockbuster_app
+```
+
 ## Manual steps to run
 - Create the database<br>
 <br>Run:
