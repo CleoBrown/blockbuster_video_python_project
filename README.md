@@ -1,6 +1,6 @@
 # Blockbuster Shop Flask App
 
-![Homepage](https://github.com/CleoBrown/blockbuster_video_python_project/blob/main/python_project_homepage.png)
+![Homepage](./python_project_homepage.png)
 ## Project Brief: Shop Inventory <br>
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
 
