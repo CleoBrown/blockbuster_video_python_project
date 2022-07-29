@@ -1,9 +1,7 @@
 # Blockbuster Shop Flask App
 
+![Homepage](https://github.com/CleoBrown/blockbuster_video_python_project/blob/main/python_project_homepage.png)
 ## Project Brief: Shop Inventory <br>
-
-
-
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
 
 
@@ -13,6 +11,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - This might mean that it makes more sense for a car shop to track makes and models of cars. Or a bookstore might sell books by author, or by publisher, and not by manufacturer. You are free to name classes and tables as appropriate to your project.
 - Show an inventory page, listing all the details for all the products in stock in a single view.
 - As well as showing stock quantity as a number, the app should visually highlight "low stock" and "out of stock" items to the user.
+
 
 
 
@@ -43,7 +42,7 @@ To stop the container:
 docker stop blockbuster_app
 ```
 
-## Manual steps to run
+## Alternative manual steps to run
 - Create the database<br>
 <br>Run:
 
