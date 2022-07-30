@@ -62,5 +62,5 @@ python console.py
 ```
 flask run
 ```
-  App should be running on ![localhost5000](localhost:5000)<br>
+  App should be running on !(localhost:5000)<br>
 
