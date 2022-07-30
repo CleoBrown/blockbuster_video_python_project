@@ -57,9 +57,10 @@ sqlite3 db/product_manager.db < db/product_manager.sql
 python console.py
 ```
 
+- Start server<br>
 <br>Run:
 ```
 flask run
 ```
-- App should be running on localhost:5000<br>
+  App should be running on localhost:5000<br>
 
