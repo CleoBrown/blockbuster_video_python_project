@@ -33,6 +33,8 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 
 ## Run with Docker - build locally
 
+_Ensure you have [Docker installed](https://docs.docker.com/get-docker/) and running on your machine._
+
 To build the image locally, cd into this project root directory and run:
 
 ```
