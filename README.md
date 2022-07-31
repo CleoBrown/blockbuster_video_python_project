@@ -1,6 +1,5 @@
 # Blockbuster Shop Flask App 
 
----
 
 ## Quick Start:
 
