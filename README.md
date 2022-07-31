@@ -1,5 +1,13 @@
-# Blockbuster Shop Flask App
+# Blockbuster Shop Flask App 
 
+---
+
+## Quick Start:
+
+```
+docker run -p 5000:5000 --name blockbuster_app cleobrown/blockbuster
+```
+---
 ![Homepage](./python_project_homepage.png)
 ## Project Brief: Shop Inventory <br>
 Build an app which allows a shopkeeper to track their shop's inventory. This is not an app which the customer will see, it is an admin/management app for the shop workers.
@@ -22,7 +30,7 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - Flask<br>
 - SQLite3<br>
 
-## Run with Docker
+## Run with Docker - build locally
 
 To build the image locally, cd into this project root directory and run:
 
