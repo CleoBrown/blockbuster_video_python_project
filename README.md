@@ -1,10 +1,5 @@
 # Blockbuster Shop Flask App 
 
-[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
-[![Flask 2.1.2](https://img.shields.io/badge/flask-2.1.2-green.svg)](https://pypi.org/project/Flask/2.1.2/)
-
-
-
 ## Quick Start
 
 _Ensure you have [Docker installed](https://docs.docker.com/get-docker/) and running on your machine._
@@ -36,6 +31,9 @@ Build an app which allows a shopkeeper to track their shop's inventory. This is 
 - Python<br>
 - Flask<br>
 - SQLite3<br>
+
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Flask 2.1.2](https://img.shields.io/badge/flask-2.1.2-green.svg)](https://pypi.org/project/Flask/2.1.2/)
 
 ## Run with Docker - build locally
 
