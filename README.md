@@ -3,6 +3,8 @@
 
 ## Quick Start:
 
+_Ensure you have [Docker installed](https://docs.docker.com/get-docker/) and running on your machine._
+
 ```
 docker run -p 5000:5000 --name blockbuster_app cleobrown/blockbuster
 ```
