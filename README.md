@@ -8,6 +8,8 @@ _Ensure you have [Docker installed](https://docs.docker.com/get-docker/) and run
 ```
 docker run -p 5000:5000 --name blockbuster_app cleobrown/blockbuster
 ```
+App should be running on [localhost:5000](http://localhost:5000)<br>
+
 ---
 ![Homepage](./python_project_homepage.png)
 ## Project Brief: Shop Inventory <br>
@@ -46,6 +48,8 @@ Then to run:
 ```
 docker run -p 5000:5000 --name blockbuster_app blockbuster
 ```
+
+App should be running on [localhost:5000](http://localhost:5000)<br>
 
 To stop the container:
 
